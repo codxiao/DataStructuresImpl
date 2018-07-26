@@ -30,7 +30,7 @@ public class LinkedList<E> {
     Node head;
 
     public LinkedList() {
-        head=null;
+        head=new Node(null,null);
         size=0;
     }
 
@@ -39,25 +39,27 @@ public class LinkedList<E> {
 //        size=1;
 //    }
     public void addFirst(E e){
-        Node node=new Node(e);
-        node.next=head;
-        head=node;
-        size++;
+        addMiddle(0,e);
+//        Node node=new Node(e);
+////        node.next=head;
+////        head=node;
+////        size++;
     }
     public void addMiddle(int index,E e){
         if (index<0||index>size)
             throw new IllegalArgumentException("索引值错误");
-        if(index==0){
-            addFirst(e);
-        }
+
         Node priv=head;
-        for(int i=0;i<index-1;i++){
+        for(int i=0;i<index;i++){
             priv=priv.next;
         }
         Node node=new Node(e);
         node.next=priv.next;
         priv.next=node;
         size++;
+    }
+    public void addLast(E e){
+        addMiddle(size,e);
     }
     public int getSize() {
         return size;
