@@ -17,6 +17,9 @@ public class Array<E> {
     public int getSize(){
         return size;
     }
+    public void setValue(int index,E value){
+        data[index]=value;
+    }
     //获取数组的容量
     public int getCapacity(){
         return data.length;

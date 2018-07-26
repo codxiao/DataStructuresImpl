@@ -2,13 +2,29 @@ package com.Queue;
 
 public class TestQueue {
     public static void main(String args[]){
-        Queue<Integer> queue=new Queue<>(3);
+        loopQueue<Integer> queue=new loopQueue<>(3);
         queue.inQueue(1);
+        queue.getFrontend();
+        System.out.println(queue.DeQueue());
+
         queue.inQueue(2);
+        queue.getFrontend();
+        System.out.println(queue.DeQueue());
+
         queue.inQueue(3);
+        queue.getFrontend();
+        System.out.println(queue.DeQueue());
+
         queue.inQueue(4);
-        queue.DeQueue();
-        queue.DeQueue();
-        System.out.println(queue.toString());
+        queue.getFrontend();
+        System.out.println(queue.DeQueue());
+
+
+
+        queue.getFrontend();
+
+
+
+
     }
 }
