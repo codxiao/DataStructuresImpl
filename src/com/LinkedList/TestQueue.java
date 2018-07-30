@@ -13,6 +13,10 @@ public class TestQueue {
 //            System.out.println(queue.toString());
 //        }
         }
+        while (queue.size!=0){
+            queue.DeQueue();
+            System.out.println(queue.toString());
+        }
 
      //   queue.DeQueue();
 
