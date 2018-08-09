@@ -13,7 +13,10 @@ public class Array<E> {
         this(10);
         size=0;
     }
-//    获取数组实际大小
+
+
+
+    //    获取数组实际大小
     public int getSize(){
         return size;
     }
